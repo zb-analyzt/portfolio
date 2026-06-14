@@ -11,7 +11,6 @@ export const education = {
     "Mentored peers in data structures and algorithm optimization",
   ],
   achievements: [
-    "Maintained 3.80+ CGPA throughout all semesters",
     "Completed 15+ hands-on projects combining AI, analytics, and software development",
     "Recognized for excellence in database design and data analytics coursework",
     "Secured internship at CodeAlpha for real-world analytics experience (May 2026–Present)",

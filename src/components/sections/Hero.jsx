@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { FaEnvelope, FaGithub, FaKaggle, FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram, FaTiktok, FaWhatsapp, FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-scroll";
 
 const socials = [
@@ -10,6 +11,22 @@ const socials = [
     icon: FaLinkedinIn,
     label: "LinkedIn",
   },
+  {
+    href: "https://wa.me/923170674509",
+    icon: FaWhatsapp,
+    label: "WhatsApp",
+  },
+  {
+    href: "https://www.tiktok.com/@zb_analyzt?_r=1&_t=ZS-97CKXGddKU8",
+    icon: FaTiktok,
+    label: "TikTok",
+  },
+  {
+    href: "https://www.instagram.com/zb_choudhary?igsh=MWlxMjNqNnVoYnJkdw==",
+    icon: FaInstagram,
+    label: "Instagram",
+  },
+  { href: "https://x.com/zbanalyzt", icon: FaXTwitter, label: "Twitter" },
   { href: "https://github.com/Zb-analyzt", icon: FaGithub, label: "GitHub" },
   { href: "https://www.kaggle.com/zbanalyzt", icon: FaKaggle, label: "Kaggle" },
   {

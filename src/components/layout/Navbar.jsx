@@ -31,7 +31,7 @@ export default function Navbar() {
           to="home"
           smooth
           duration={500}
-          className="cursor-pointer text-2xl font-black tracking-[0.25em] bg-gradient-to-r from-sky-400 via-indigo-400 to-emerald-400 bg-clip-text text-transparent"
+          className="cursor-pointer text-2xl font-black tracking-[0.25em] bg-linear-to-r from-sky-400 via-indigo-400 to-emerald-400 bg-clip-text text-transparent"
         >
           ZZ
         </Link>

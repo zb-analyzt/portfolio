@@ -1,10 +1,12 @@
 import {
   FaGithub,
   FaKaggle,
+  FaInstagram,
   FaLinkedinIn,
   FaArrowUp,
   FaEnvelope,
 } from "react-icons/fa";
+import { FaTiktok, FaWhatsapp, FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-scroll";
 
 const socialLinks = [
@@ -13,6 +15,22 @@ const socialLinks = [
     icon: FaLinkedinIn,
     label: "LinkedIn",
   },
+  {
+    href: "https://wa.me/923170674509",
+    icon: FaWhatsapp,
+    label: "WhatsApp",
+  },
+  {
+    href: "https://www.tiktok.com/@zb_analyzt?_r=1&_t=ZS-97CKXGddKU8",
+    icon: FaTiktok,
+    label: "TikTok",
+  },
+  {
+    href: "https://www.instagram.com/zb_choudhary?igsh=MWlxMjNqNnVoYnJkdw==",
+    icon: FaInstagram,
+    label: "Instagram",
+  },
+  { href: "https://x.com/zbanalyzt", icon: FaXTwitter, label: "Twitter" },
   { href: "https://github.com/Zb-analyzt", icon: FaGithub, label: "GitHub" },
   { href: "https://www.kaggle.com/zbanalyzt", icon: FaKaggle, label: "Kaggle" },
   {
@@ -28,7 +46,7 @@ export default function Footer() {
       <div className="section-shell flex flex-col items-center gap-5">
         <p>
           Designed &amp; Built by{" "}
-          <span className="bg-gradient-to-r from-sky-400 via-indigo-400 to-emerald-400 bg-clip-text font-semibold text-transparent">
+          <span className="bg-linear-to-r from-sky-400 via-indigo-400 to-emerald-400 bg-clip-text font-semibold text-transparent">
             Zohaib Zulfiqar
           </span>
         </p>
@@ -52,7 +70,7 @@ export default function Footer() {
         to="home"
         smooth
         duration={500}
-        className="fixed bottom-5 right-5 inline-flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-sky-400 via-indigo-400 to-emerald-400 text-slate-950 shadow-[0_0_24px_rgba(56,189,248,0.22)] transition hover:scale-110"
+        className="fixed bottom-5 right-5 inline-flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-linear-to-r from-sky-400 via-indigo-400 to-emerald-400 text-slate-950 shadow-[0_0_24px_rgba(56,189,248,0.22)] transition hover:scale-110"
         aria-label="Back to top"
       >
         <FaArrowUp />

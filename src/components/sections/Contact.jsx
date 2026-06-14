@@ -3,9 +3,11 @@ import {
   FaEnvelope,
   FaGithub,
   FaKaggle,
+  FaInstagram,
   FaLinkedinIn,
   FaPhone,
 } from "react-icons/fa";
+import { FaTiktok, FaWhatsapp, FaXTwitter } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import SectionHeading from "../ui/SectionHeading.jsx";
 
@@ -23,10 +25,34 @@ const links = [
     icon: FaPhone,
   },
   {
+    label: "WhatsApp",
+    value: "+92 317 067 4509",
+    href: "https://wa.me/923170674509",
+    icon: FaWhatsapp,
+  },
+  {
     label: "LinkedIn",
     value: "zohaib-zulfiqar-data-analyst",
     href: "https://www.linkedin.com/in/zohaib-zulfiqar-data-analyst",
     icon: FaLinkedinIn,
+  },
+  {
+    label: "TikTok",
+    value: "@zb_analyzt",
+    href: "https://www.tiktok.com/@zb_analyzt?_r=1&_t=ZS-97CKXGddKU8",
+    icon: FaTiktok,
+  },
+  {
+    label: "Instagram",
+    value: "@zb_choudhary",
+    href: "https://www.instagram.com/zb_choudhary?igsh=MWlxMjNqNnVoYnJkdw==",
+    icon: FaInstagram,
+  },
+  {
+    label: "Twitter",
+    value: "@zbanalyzt",
+    href: "https://x.com/zbanalyzt",
+    icon: FaXTwitter,
   },
   {
     label: "GitHub",
@@ -70,9 +96,15 @@ export default function Contact() {
     setErrors(nextErrors);
 
     if (Object.keys(nextErrors).length === 0) {
-      window.alert(
-        "Thanks for reaching out. This demo form is ready for integration.",
+      const recipientEmail = "zohaib.dataanalyst@gmail.com";
+      const subject = encodeURIComponent(
+        `${formData.subject} | Portfolio Contact from ${formData.name}`,
       );
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`,
+      );
+
+      window.location.href = `mailto:${recipientEmail}?subject=${subject}&body=${body}`;
       setFormData({ name: "", email: "", subject: "", message: "" });
     }
   };
@@ -125,6 +157,15 @@ export default function Contact() {
             onSubmit={handleSubmit}
             className="glass-card rounded-3xl p-6 sm:p-8"
           >
+            <a
+              href="https://wa.me/923170674509"
+              target="_blank"
+              rel="noreferrer"
+              className="mb-6 flex items-center justify-between rounded-2xl border border-emerald-400/20 bg-emerald-400/10 px-4 py-4 text-sm text-emerald-100 transition hover:border-emerald-400/40 hover:bg-emerald-400/15"
+            >
+              <span className="font-medium">Prefer WhatsApp?</span>
+              <span className="font-semibold text-emerald-300">Chat now</span>
+            </a>
             <div className="grid gap-4 sm:grid-cols-2">
               <div>
                 <input
@@ -180,9 +221,9 @@ export default function Contact() {
             </div>
             <button
               type="submit"
-              className="mt-6 w-full rounded-full bg-gradient-to-r from-sky-400 via-indigo-400 to-emerald-400 px-6 py-3.5 font-semibold text-slate-950 transition hover:scale-[1.02]"
+              className="mt-6 w-full rounded-full bg-linear-to-r from-sky-400 via-indigo-400 to-emerald-400 px-6 py-3.5 font-semibold text-slate-950 transition hover:scale-[1.02]"
             >
-              Send Message
+              Send Email
             </button>
           </motion.form>
         </div>
